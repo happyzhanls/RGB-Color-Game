@@ -2,8 +2,6 @@ var iSquares = 6;
 var aColors = [];
 var colorPicked;
 
-var randAnim
-
 $(document).ready(function() {
 	// reset!
 	fnReset();
@@ -24,13 +22,13 @@ $(document).ready(function() {
 			$("#messageDisplay").text("You win!");
 			$("#resetBtn").text("Play again?");
 			// animate the color of squares to the same
-			$(".squares").removeClass("jello animated");
+			$(".squares").removeClass("wobble animated");
 			$(".squares").addClass("tada animated");
 			$(".squares, h1").css("background-color", colorPicked);
 		} else {
 			$("#messageDisplay").text("Try again?");
 			// animate the color of the colorClicked back to the color of body
-			$(this).addClass("jello animated");
+			$(this).addClass("wobble animated");
 			$(this).css("background-color", "#232323");
 		}
 	});
@@ -83,11 +81,11 @@ function fnReset() {
   		if(aColors[index]) {
   			$(this).css("background-color", aColors[index]);
   			$(this).show("fast", "linear", function() {
-  				$(this).removeClass("jello tada animated");
+  				$(this).removeClass("wobble tada animated");
   			});
   		} else {
   			$(this).hide("fast", "linear", function() {
-  				$(this).removeClass("jello tada animated");
+  				$(this).removeClass("wobble tada animated");
   			});
   		}
   	});
