@@ -12,7 +12,7 @@ body h1 {
 	margin: 0;
 	text-transform: uppercase;
 	padding: 20px 0px;
-	transition: background-color 0.7s;
+	transition: background-color 0.5s;
 }
 
 .squares {
@@ -32,7 +32,7 @@ body h1 {
 }
 
 #colorDisplay {
-	font-size: 200%;
+	font-size: 199%;
 }
 
 #stripe {
