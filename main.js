@@ -22,13 +22,13 @@ $(document).ready(function() {
 			$("#messageDisplay").text("You win!");
 			$("#resetBtn").text("Play again?");
 			// animate the color of squares to the same
-			$(".squares").removeClass("wobble animated");
-			$(".squares").addClass("tada animated");
+			$(".squares").removeClass("myAnimated wobble");
+			$(".squares").addClass("myAnimated tada");
 			$(".squares, h1").css("background-color", colorPicked);
 		} else {
 			$("#messageDisplay").text("Try again?");
 			// animate the color of the colorClicked back to the color of body
-			$(this).addClass("wobble animated");
+			$(this).addClass("myAnimated wobble");
 			$(this).css("background-color", "#232323");
 		}
 	});
@@ -81,11 +81,11 @@ function fnReset() {
   		if(aColors[index]) {
   			$(this).css("background-color", aColors[index]);
   			$(this).show("fast", "linear", function() {
-  				$(this).removeClass("wobble tada animated");
+  				$(this).removeClass("myAnimated wobble tada");
   			});
   		} else {
   			$(this).hide("fast", "linear", function() {
-  				$(this).removeClass("wobble tada animated");
+  				$(this).removeClass("myAnimated wobble tada");
   			});
   		}
   	});
