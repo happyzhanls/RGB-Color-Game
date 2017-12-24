@@ -11,7 +11,13 @@ $(document).ready(function() {
 		$(".modeBtn").removeClass("selected");
 		// add .selected
 		$(this).addClass("selected");
-		$(this).text() === "easy" ? iSquares = 3 : iSquares = 6;
+		if($(this).text() === "easy") {
+			iSquares = 3;
+		} else if($(this).text() === "hard") {
+			iSquares = 6;
+		} else if($(this).text() === "hell") {
+			iSquares = 9;
+		}
 		fnReset();
 	});
 	// setup squares
@@ -61,7 +67,7 @@ function randomColor() {
 }
 
 // Randomly pick a rgb color.
-function pickColor() {
+function pickColor() { 
 	var random = Math.floor(Math.random() * aColors.length);
 	return aColors[random];
 }
@@ -78,7 +84,7 @@ function fnReset() {
 	$("#messageDisplay").text("");
 	// 5. resetBtn different background colors according to iSquares
   	$(".squares").each(function(index) {
-  		if(aColors[index]) {
+  		if(index < iSquares) {
   			$(this).css("background-color", aColors[index]);
   			$(this).show("fast", "linear", function() {
   				$(this).removeClass("myAnimated wobble tada");
@@ -90,7 +96,7 @@ function fnReset() {
   		}
   	});
 	// 6. resetBtn the $("h1") background color
-  	$("h1").css("background-color", "steelblue");
+  	$("h1").css("background-color", "crimson");
 	// 7. change the resetButton back to "New Colors"
 	$("#resetBtn").text("New Colors");
 }
