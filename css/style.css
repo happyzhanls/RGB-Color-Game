@@ -22,8 +22,8 @@ body h1 span {
 
 .squares {
   	width: 30%;
-  	background-color: purple;
-  	padding-bottom: 20%;
+  	background-color: #232323;
+  	padding-bottom: 15%;
   	float: left;
   	margin: 1.66%;
 	border-radius: 50%;
